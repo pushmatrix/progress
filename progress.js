@@ -16,10 +16,6 @@ var ProgressBar = function(width, height) {
 
   var border = paper.rect(x, y, width, height, 4).attr({ stroke: "#444", "stroke-width": 2});
   
-  function offset() {
-    return percent * 0.01 * height;
-  }
-  
   function color() {
     // In HSB, red has hue=0, green has hue=120. HSB has a max hue of 360
     // So we take 120 * percent * 0.01 / 360
